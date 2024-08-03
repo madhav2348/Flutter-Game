@@ -17,7 +17,7 @@ class Bat extends PositionComponent
   final Radius cornerRadius;
 
   final _paint = Paint()
-    ..color = const Color(0xff1e6091)
+    ..color = const Color(0xff000000)
     ..style = PaintingStyle.fill;
 
   @override
@@ -34,7 +34,7 @@ class Bat extends PositionComponent
     position.x = (position.x + event.localDelta.x).clamp(0, gameWidth);
   }
 
-  void moveBY(double dx) {
+  void moveBy(double dx) {
     add(
       MoveToEffect(
         Vector2((position.x + dx).clamp(0, gameWidth), position.y),
