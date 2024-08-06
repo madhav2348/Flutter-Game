@@ -2,11 +2,9 @@ import 'package:brick_breaker/src/brick_breaker.dart';
 import 'package:brick_breaker/src/component/component.dart';
 import 'package:brick_breaker/src/config.dart';
 
-
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flame/effects.dart';
-
 
 import 'package:flutter/material.dart';
 
@@ -57,7 +55,7 @@ class Ball extends CircleComponent
       }
     } else if (other is Bat) {
       velocity.y = -velocity.y;
-      velocity.x = -velocity.x +
+      velocity.x = velocity.x +
           (position.x - other.position.x) / other.size.x * gameWidth * 0.3;
     } else if (other is Brick) {
       if (position.y < other.position.y - other.size.y / 2) {
