@@ -45,7 +45,6 @@ class Ball extends CircleComponent
         velocity.x = -velocity.x;
       } else if (intersectionPoints.first.y >= game.height) {
         velocity.y = -velocity.y;
-        // // removeFromParent();
         add(RemoveEffect(
           delay: 0.35,
           onComplete: () {
@@ -68,8 +67,7 @@ class Ball extends CircleComponent
         velocity.x = -velocity.x;
       }
       velocity.setFrom(velocity);
-    } else {
-      debugPrint('collision with $other ');
-    }
+    } 
+    // else {}
   }
 }

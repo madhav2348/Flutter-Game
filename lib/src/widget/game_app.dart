@@ -25,6 +25,7 @@ class _GameAppState extends State<GameApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
         textTheme: GoogleFonts.pressStart2pTextTheme().apply(
@@ -56,8 +57,9 @@ class _GameAppState extends State<GameApp> {
                         child: SizedBox(
                           width: gameWidth,
                           height: gameHeight,
-                          child: GameWidget.controlled(
-                            gameFactory: BrickBreaker.new,
+                          child: GameWidget( //there is no controller in main project , it was removed 
+                            // gameFactory: BrickBreaker.new, ,.. It only works with GameWidget.controller
+                            game: game,
                             overlayBuilderMap: {
                               PlayState.welcome.name: (context, game) =>
                                   const OverlayScreen(
