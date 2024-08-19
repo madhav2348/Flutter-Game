@@ -1,7 +1,8 @@
 # Brick and Ball game
 
-A new Flutter project on game development 
-## screenshot 
+## A new Flutter project on game development 
+
+# Screenshot 
 
 
 
