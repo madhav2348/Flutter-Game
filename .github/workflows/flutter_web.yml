@@ -7,7 +7,7 @@ name: Build My Apps
 
 jobs:
   build:
-    name: Build and Release new apk
+    name: Build and Release For web
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
