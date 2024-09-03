@@ -20,5 +20,5 @@ jobs:
         with:
           channel: 'stable'
       - run: flutter pub get
-      - run: flutter build web --release 
+      - run: flutter build web
 
